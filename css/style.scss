@@ -1,0 +1,132 @@
+@import url(https://fonts.googleapis.com/css?family=Abel);
+// font-family
+$baseFontFamily : "游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif ;
+
+//colors
+$baseColor: #FCE1FC ;
+$subColor : #c699c6 ;
+$keyColor : #E142B1 ;
+$fontColor: #F473D7F ;
+
+/* Bace
+----------------------------------------------------------------------------------*/
+html{ font-size: 62.5%; }
+
+body{
+    color: $fontColor;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    letter-spacing: 0.1em;
+    background-color: $baseColor;
+}
+
+/* Aline
+----------------------------------------------------------------------------------*/
+.text-center{
+    text-align:center;
+}
+
+
+
+//背景画像の設定とサイズの調整
+
+.back {
+  background-image:url("../img_work_blog.jpg");
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 20px;
+}
+
+ @media (max-width: 768px) {
+  .back {
+    height: 250px;
+  }
+}
+
+//テキスト部分
+
+    .site-title{
+        font-size:4.2rem;
+        line-height: normal;
+        display: block;
+        color: #fff;
+        background-color: $keyColor;
+        }
+
+        .title{
+        font-size:1.5rem;
+        line-height: normal;
+        display: block;
+        color: #fff;
+        background-color: $keyColor;
+        margin: 5px 5px;
+    }
+    
+        p{
+        display: block;
+        margin: 0 5px;   
+        }
+
+
+//3つのテキストボックスの設定
+    .container{
+        display: flex;
+        flex-direction: row;
+}
+    .box{
+        margin: 10px;
+        flex: 1;
+
+ }
+ 
+ @media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}  
+    
+//ボタンの設定
+
+#bottom{
+    background-color: $subColor;
+    margin: 5px 0px; 
+    padding: 20px; 
+}
+
+#bottom a{
+    text-decoration: none;
+}
+    
+        #bottom .button-readmore{
+            flex:0 1 auto;
+            width:180px;
+            margin:auto;
+            text-align: center;
+            text-decoration: none;
+            padding: 5px 0;
+            height: 20px;
+            color: #fff;
+            font-weight: bold;
+            background-color: $keyColor;
+            font-family: 'Abel',sans-serif;
+            text-transform: uppercase;
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+        
+        
+// desktop
+@media (min-width: 1025px){
+    #bottom{
+    a {
+        .button-readmore{
+             &:hover{
+                     background-color: darken($keyColor,20%);
+                        }
+                    }
+}
+}
+}
+
